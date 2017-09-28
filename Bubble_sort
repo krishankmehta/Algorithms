@@ -1,0 +1,46 @@
+//To Perform bubble sort
+
+
+
+
+
+#include<iostream>
+
+using namespace std;
+
+
+void swap(int* x,int* y)
+{
+    int temp = *x;
+    *x = *y;
+    *y = temp;
+    
+}
+
+
+void bubble(int array[],int size)
+{
+    for(int i=0;i<size-1;i++)
+    {
+        for(int j=0;j<size-1;j++)
+        {
+            if(array[j]>array[j+1])
+            {
+                swap(&array[j],&array[j+1]);
+            }
+        }
+    }
+    
+    
+}
+int main()
+{
+    int array[] = {9,8,7,6,5,4,3,2,1};
+    int size = (sizeof(array)/sizeof(array[0]));
+    bubble(array,size);
+    for(int i=0;i<size;i++)
+    {
+        cout<<array[i]<<" ";
+    }
+    
+}
